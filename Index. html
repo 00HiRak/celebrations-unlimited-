@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrations Unlimited | Event Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0a0a0b;
+            --card-bg: #1a1a1c;
+            --text-light: #f4f4f4;
+            --accent-gradient: linear-gradient(45deg, #d4af37, #f9e297);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--dark-bg); color: var(--text-light); scroll-behavior: smooth; }
+
+        /* Hero */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 4px solid var(--gold);
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 6vw, 4rem); color: var(--gold); margin-bottom: 10px; }
+
+        .section-title { text-align: center; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; text-transform: uppercase; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .gallery-item {
+            height: 200px; border: 2px solid #333; overflow: hidden; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        }
+        .gallery-item:hover { border-color: var(--gold); transform: scale(1.02); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Contact Form */
+        .contact-section { background: #111; padding: 60px 20px; border-radius: 20px; margin-top: 40px; }
+        .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .contact-form input, .contact-form textarea {
+            padding: 15px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; font-family: inherit;
+        }
+        .contact-form input:focus { border-color: var(--gold); outline: none; }
+        .submit-btn {
+            background: var(--accent-gradient); color: black; font-weight: bold; padding: 15px; border: none; 
+            border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s;
+        }
+        .submit-btn:hover { letter-spacing: 2px; }
+
+        footer { background: #000; padding: 40px; text-align: center; border-top: 2px solid var(--gold); margin-top: 60px; }
+        .footer-info { margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-info span { color: var(--gold); font-weight: bold; margin: 0 15px; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Celebrations Unlimited</h1>
+        <p>EVENT MANAGEMENT EXCELLENCE</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400" alt="Wedding"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=400" alt="Event"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=400" alt="Concert"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=400" alt="Party"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400" alt="DJ"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=400" alt="Camera"></div>
+        </div>
+
+        <div class="contact-section">
+            <h2 class="section-title">Book Your Event</h2>
+            <form class="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <textarea name="message" rows="5" placeholder="Tell us about your event (Date, Type, Venue)..." required></textarea>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <span>📞 8918848772</span> | <span>✉️ hirakmahata2001@gmail.com</span>
+        </div>
+        <p>&copy; 2026 Celebrations Unlimited. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
